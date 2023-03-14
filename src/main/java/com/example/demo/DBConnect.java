@@ -15,8 +15,8 @@ public class DBConnect {
             Class.forName("com.mysql.jdbc.Driver");
             // Setup the connection with the DB
             connect = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/mysql?"
-                            + "user=root&password=reboot2023");
+                    .getConnection("jdbc:mysql://localhost:3306/mysql",
+                            "root", "reboot2023");
 
             // Statements allow to issue SQL queries to the database
             statement = connect.createStatement();
