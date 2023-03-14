@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoApplication {
 
     @RequestMapping("/")
-    String home() {
-        return "Hello World!";
+    String home() throws Exception {
+        DBConnect database = new DBConnect();
+        String contents = database.readDataBase();
+        return contents;
     }
 
     public static void main(String[] args) {
